@@ -1,22 +1,26 @@
-# Sprint18.-Authentication-Authorization
-### The structure of the project is the same as in previous two sprints.
-### Please, differentiate access to the resources as described:
-###  
+Online Store Management System
+.NET MVC application with role-based access and CRUD operations.
+Features
 
-1. All users are allowed to see pages products and supermarkets
-2. Only user with role "admin" can create/edit/delete supermarket
-3. Only user with role "admin" can create/edit/delete product
-4. Only authenticated users can see the content of the Home page
-5. Only users with role "admin" can see page Customers
-6. User with role "admin" can see page *Orders* with orders from all users
-7. User with role "buyer" can see page *Orders* only with his own orders and cannot modify, create or delete orders
-8. Every buyer receives claim "buyerType" with possible values: "none", "regular", "golden", "wholesale".
-9. Only buyers with "golden", "wholesale" claim values have access to Discount page (*My Discount* tab in the main menu)
+Product and supermarket management
+Role-based access (Admin/Buyer)
+Buyer types (None/Regular/Golden/Wholesale)
+Order management system
+Discount system for premium buyers
 
-10. Implement *Register* page that creates user and assigns to him default role Buyer and type Regular
-11. Implement *Login* page that should be accessible through *Login* tab (link) in the main menu. When user is logged in the link should be changed to *Logout*
-12. **Implement Admin tab that is available only to users with Admin role.  On this tab user with an "admin" role can*
-	* See the list of all users
-	* Edit any user - ability to change his role and claim buyerType
-# 	
-*Note: if some action or view is forbidden for user, corresponding links or tabs should be hidden and action shouln't be accessible neither via link nor via url*
+Access
+
+Public: View products and supermarkets
+Buyer: Personal orders, home page access
+Premium Buyers: Additional discount access
+Admin: Full CRUD access, user management
+
+Setup
+
+Update connection string
+Run migrations
+Build and run
+Default admin credentials:
+
+Email: admin@example.com
+Password: Admin123!
